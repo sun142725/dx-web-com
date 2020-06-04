@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+console.log(process.env.NODE_ENV)
 module.exports = {
+    // entry: process.env.NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -16,8 +18,14 @@ module.exports = {
         umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
     },
     devServer: {
-        port: 8082, // Defaults to 8080
-        contentBase: path.join(__dirname, './dist')
+        port: 8888, // Defaults to 8080
+        contentBase: path.join(__dirname, './dist'),
+        historyApiFallback: {
+            rewrites: [{
+                from: /.*/g,
+                to: '/index.html' //与output的publicPath有关(HTMLplugin生成的html默认为index.html)
+            }]
+        },
     },
     module: {
         rules: [
@@ -59,5 +67,5 @@ module.exports = {
             'vue-router': 'VueRouter'
         }
     },
-    mode: 'production'
+    mode: 'development'
 };

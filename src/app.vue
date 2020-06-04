@@ -1,20 +1,36 @@
 <template>
-  <div id="app">
-    <custom-switch v-model="lightSwitch" align="center">开关:</custom-switch>
+  <div >
+    <nav-bar
+      title="标题"
+      left-text="返回"
+      right-text="按钮"
+      left-arrow
+      @click-left="onClickLeft"
+      @click-right="onClickRight"
+    />
+    <router-view style="height: calc(100vh - 44px)"></router-view>
   </div>
 </template>
 
 <script>
-
+import { NavBar } from 'vant'
   export default {
     name: 'app',
+    components: { NavBar },
     data() {
       return {
         lightSwitch: true
       }
     },
     mounted: function(){
-        console.log('test 11111111')
+    },
+    methods: {
+      onClickLeft(){
+
+      },
+      onClickRight(){
+        
+      }
     }
   }
 </script>
