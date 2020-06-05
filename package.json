@@ -1,12 +1,13 @@
 {
   "name": "dx-web-com",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "大象组件库",
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "devTest": "webpack-dev-server --inline --hot --host=0.0.0.0 --port=8080",
     "dev": "set NODE_ENV=development && webpack-dev-server --open --hot",
-    "build": "webpack --config webpack.config.js --progress --mode=production",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
     "build:test": "webpack ./src/app.js --mode=development"
   },
   "keywords": [],
@@ -23,10 +24,12 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^4.3.0",
     "js-md5": "^0.7.3",
+    "moment": "^2.26.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",

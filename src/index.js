@@ -3,7 +3,7 @@ import Vue from 'vue'
 import './util/rem'
 import './style/common.scss'
 import CustomSwitch from '../packages/switch/index'
-import signParams from '../packages/dx-sign/dx-sign'
+import { signParams } from '../packages/dx-sign/dx-sign'
 import DoctorList from '../packages/doctor-list/doctor-list'
 
 const components = [

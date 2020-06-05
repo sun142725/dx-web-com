@@ -5,17 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-console.log(process.env.NODE_ENV)
+
 module.exports = {
-    // entry: process.env.NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
     entry: './src/main.js',
+    // entry: './src/main.js',
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './docs'),
         publicPath: '/dist/',
-        filename: '[name].js',
-        library: 'dx-web-com', // 指定的就是你使用require时的模块名
-        libraryTarget: 'umd', // libraryTarget会生成不同umd的代码,可以只是commonjs标准的，也可以是指amd标准的，也可以只是通过script标签引入的
-        umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
+        filename: 'build.js'
     },
     devServer: {
         port: 8888, // Defaults to 8080
@@ -67,5 +64,31 @@ module.exports = {
             'vue-router': 'VueRouter'
         }
     },
-    mode: 'development'
+    mode: 'production'
 };
+var a = process.env.NODE_ENV
+console.log(process.env.NODE_ENV, a)
+if (a == 'production') {
+  console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+    module.exports.devtool = '#source-map'
+      module.exports.entry = './src/index.js';
+      module.exports.output = {
+        path: path.resolve(__dirname, './dist'),
+        publicPath: '/dist/',
+        filename: 'dx-web-com.min.js',
+        library: 'dxWebCom', // 指定的就是你使用require时的模块名
+        libraryTarget: 'umd', // libraryTarget会生成不同umd的代码,可以只是commonjs标准的，也可以是指amd标准的，也可以只是通过script标签引入的
+        umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
+      };
+  
+      // Banner
+      var moment = require('moment');
+      var pkg = require('./package.json');
+      var banner = 'Vue Scroller \nversion: ' + pkg.version + ' \nrepo: https://github.com/wangdahoo/vue-scroller \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
+      module.exports.plugins.push(
+        new webpack.BannerPlugin({ 
+          banner: banner,
+          entryOnly: true 
+        })
+      );
+  }
