@@ -7,7 +7,7 @@
         :doctorPic="item.portraitFilePath"
         :title="item.doctorName"
         :subTitle="item.doctorTitleName"
-        :doctorTags="[item.deptName2]"
+        :doctorTags="item.deptName2 ? [item.deptName2] : []"
         :remark="item.goodAt"
         :price="item.servicePrice"
         @btnClick="()=>btnClick(item)"
@@ -42,6 +42,7 @@ import { DoctorList } from '../index'
 .container{
   height: 100%;
   background: #f6f6f6;
+  overflow-y: auto;
 }
 .doctor-list-container{
   width: 100%;

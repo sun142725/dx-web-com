@@ -8,10 +8,9 @@ const webpack = require('webpack')
 
 module.exports = {
     entry: './src/main.js',
-    // entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './docs'),
-        publicPath: '/dist/',
+        publicPath: '/',
         filename: 'build.js'
     },
     devServer: {
@@ -67,8 +66,8 @@ module.exports = {
     mode: 'production'
 };
 var a = process.env.NODE_ENV
-console.log(process.env.NODE_ENV, a)
-if (a == 'production') {
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV == 'production') {
   console.log('process.env.NODE_ENV', process.env.NODE_ENV)
     module.exports.devtool = '#source-map'
       module.exports.entry = './src/index.js';

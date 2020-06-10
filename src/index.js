@@ -5,6 +5,7 @@ import './style/common.scss'
 import CustomSwitch from '../packages/switch/index'
 import { signParams } from '../packages/dx-sign/dx-sign'
 import DoctorList from '../packages/doctor-list/doctor-list'
+import ImageTextUD from '../packages/image-text-u-d/image-text-u-d.vue'
 
 const components = [
   CustomSwitch
@@ -22,7 +23,8 @@ export{
   install,
   CustomSwitch,
   signParams,
-  DoctorList
+  DoctorList,
+  ImageTextUD
 }
 
 /* 支持使用标签的方式引入 */

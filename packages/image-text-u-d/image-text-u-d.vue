@@ -1,20 +1,11 @@
 <template>
   <div>
-    <div class="doctor-info">
+    <div class="image-text-u-d">
         <div class="doctor-info-pic">
             <img :src="doctorPic" />
         </div>
         <div class="doctor-info-content">
-            <h6 class="title">{{title}}</h6>
-            <div class="sub-title">{{subTitle}}</div>
-            <div v-if="doctorTags.length > 0">
-              <tag type="primary" v-for="(v,i) in doctorTags" :key="i">{{v}}</tag>
-            </div>
-            <div class="remark">擅长：{{remark}}</div>
-            <div class="control-container">
-              <span class="left">图文问诊￥{{price}}</span>
-              <Button type="info" @click="btnClick">立即问诊</Button>
-            </div>
+            1211221
         </div>
     </div>
   </div>
@@ -23,7 +14,7 @@
 <script>
 import { Tag, Button } from 'vant'
   export default {
-    name: "DoctorList",
+    name: "ImageTextUD",
     components: { Tag, Button },
     props: {
       doctorPic: {
