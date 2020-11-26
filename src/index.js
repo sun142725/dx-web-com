@@ -19,7 +19,7 @@ const install = function (Vue, opts = {}) {
   });
   Vue.prototype.$dxSign = signParams
 }
-export{
+export {
   install,
   CustomSwitch,
   signParams,

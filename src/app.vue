@@ -1,23 +1,11 @@
 <template>
-  <div >
-    <nav-bar
-      title="标题"
-      left-text="返回"
-      right-text="按钮"
-      left-arrow
-      @click-left="onClickLeft"
-      @click-right="onClickRight"
-    />
-    <action-sheet
-            :close-on-popstate="true"
-            close-icon=""
-            v-model="switchRouteFlag"
-            >
-            <div class="action-sheet-content">
-                <div v-for="(v, i) in routes" :key="i" @click="switchRoute(v)">{{v.title}}</div>
-            </div>
-        </action-sheet>
-    <router-view style="height: calc(100vh - 44px)"></router-view>
+  <div class="app">
+    <div class="left-menu">
+      <div>111</div>
+    </div>
+    <div>
+      <router-view></router-view>
+    </div>    
   </div>
 </template>
 
@@ -56,21 +44,14 @@ import router from './router/index'
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
   }
-  .action-sheet-content{
-    height: 300px;
-    text-align: center;
-    overflow-y: auto;
-    line-height: 50px;
-    font-size: 14px;
-    >div{
-        text-align: center;
-        border-bottom: 1px solid #e9e9e9;
-        
-    }
-}
+  .left-menu{
+    width: 220px;
+    background: 100%;
+  }
 
 </style>

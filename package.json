@@ -8,7 +8,7 @@
     "devTest": "webpack-dev-server --inline --hot --host=0.0.0.0 --port=8888",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
-    "build:test": "webpack ./src/app.js --mode=development"
+    "build:test": "webpack ./src/main.js --mode=development"
   },
   "keywords": [],
   "author": "",

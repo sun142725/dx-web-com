@@ -11,17 +11,19 @@
 
     插件
         
+## Quickstart
 
+```js
+import Vue from 'vue';
+import { Button } from 'dx-web-com';
 
-## 初始化
-    gitlab地址 
-    将项目checkout到本地,并新建开发分支,如`dev/v_20200424_功能`
+Vue.use(Button);
+```
 
-```  
 
 ## Project setup
 ```
-npm install
+npm install --registry=http://47.93.206.48:8081/repository/dx-web-group/
 ```
 
 ### Compiles and hot-reloads for development
@@ -42,4 +44,4 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-npm install --registry=http://47.93.206.48:8081/repository/npm/
+

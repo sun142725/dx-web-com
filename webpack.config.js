@@ -83,7 +83,7 @@ if (process.env.NODE_ENV == 'production') {
       // Banner
       var moment = require('moment');
       var pkg = require('./package.json');
-      var banner = 'Vue Scroller \nversion: ' + pkg.version + ' \nrepo: https://github.com/wangdahoo/vue-scroller \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
+      var banner = 'dx-web-com \nversion: ' + pkg.version + ' \nrepo: https://github.com/sun142725/dx-web-com \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
       module.exports.plugins.push(
         new webpack.BannerPlugin({ 
           banner: banner,
