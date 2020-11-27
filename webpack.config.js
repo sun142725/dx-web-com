@@ -25,6 +25,18 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.md$/,
+                use: [
+                    'vue-loader',
+                    {
+                        loader: path.resolve(__dirname, './loader/MdToVue.js'),
+                        options: {
+                            html: true
+                        }
+                    }
+                ]
+            },
             { 
                 test: /\.(css|scss|less)$/,
                 use: [

@@ -104,3 +104,58 @@ input[type="search"]::-webkit-search-cancel-button{
 input:disabled{
   background: none;
 }
+
+
+.markdown-body{
+  h1, h2, h3, h4, h5, h6{
+    color: #323233;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  h2{
+    margin: 45px 0 20px;
+    font-size: 25px;
+  }
+  h3{
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+  .md-card{
+    padding: 24px;
+    margin-bottom: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px #ebedf0;
+  }
+  p{
+    color: #34495e;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  code{
+    position: relative;
+    display: block;
+    padding: 16px;
+    overflow-x: auto;
+    color: #58727e;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+    line-height: 26px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: auto;
+    background-color: #fafafa;
+    border-radius: 16px;
+  }
+  .hljs-params, .hljs-keyword, .hljs-attribute {
+    color: #8080ff;
+  }
+  .hljs-string, .hljs-meta, .hljs-symbol, .hljs-template-tag, .hljs-template-variable, .hljs-addition {
+    color: #4fc08d;
+  }
+}

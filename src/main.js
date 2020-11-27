@@ -4,6 +4,7 @@ import './util/rem'
 import './style/common.scss'
 import 'vant/lib/button/style';
 import router from './router/index'
+
 window.Vue = Vue;
 
 // /* 支持使用标签的方式引入 */

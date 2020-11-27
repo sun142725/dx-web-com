@@ -3,6 +3,8 @@ Vue.use(VueRouter)
 import App from '../App.vue'
 import DoctorList from '../dome/doctor-list.vue'
 import ImageText from '../dome/image-text.vue'
+import UrlUtils from '../../packages/url-utils/demo/index.vue'
+import DxSign from '../../packages/dx-sign/demo/index.vue'
 const router = new VueRouter({
     mode: 'history',
     routes: [
@@ -22,6 +24,16 @@ const router = new VueRouter({
           title: '图文组件',
           name: 'image-text',
           component: ImageText
+      },
+      {
+          path: '/util/url-utils',
+          name: 'UrlUtils',
+          component: UrlUtils
+      },
+      {
+          path: '/util/dx-sign',
+          name: 'DxSign',
+          component: DxSign
       },
       {
           path: '*',

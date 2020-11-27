@@ -1,7 +1,8 @@
 # UrlUtils
 ### 介绍
+```
 大象的接口加密处理
-
+```
 ### 引入
 
 ```js
@@ -11,7 +12,7 @@ Vue.use(signParams)
 Vue.use(tempSignParams)
 
 // 加密对象
-signParams({key:1, code: 123456})
+signParams({"channelCode": "10002", "code": "123456"})
 // 
 
 
@@ -19,6 +20,7 @@ signParams({key:1, code: 123456})
 tempSignParams("GET", {}, "/getList?code=123")
 // 
 ```
+
 
 
 
