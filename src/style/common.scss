@@ -131,11 +131,6 @@ input:disabled{
     border-radius: 12px;
     box-shadow: 0 8px 12px #ebedf0;
   }
-  p{
-    color: #34495e;
-    font-size: 15px;
-    line-height: 26px;
-  }
   code{
     position: relative;
     display: block;
@@ -152,10 +147,96 @@ input:disabled{
     background-color: #fafafa;
     border-radius: 16px;
   }
+  p{
+    color: #34495e;
+    font-size: 15px;
+    line-height: 26px;
+    code{
+      display: inline;
+      margin: 0 2px;
+      padding: 2px 5px;
+      font-size: 14px;
+      font-family: inherit;
+      word-break: keep-all;
+      background-color: #f7f8fa;
+      border-radius: 4px;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
   .hljs-params, .hljs-keyword, .hljs-attribute {
     color: #8080ff;
   }
   .hljs-string, .hljs-meta, .hljs-symbol, .hljs-template-tag, .hljs-template-variable, .hljs-addition {
     color: #4fc08d;
   }
+  .hljs-attr, .hljs-selector-tag, .hljs-title, .hljs-section, .hljs-built_in, .hljs-doctag, .hljs-type, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-strong{
+    color: #4994df;
+  }
+  // -------------------table--------------
+  table{
+    width: 100%;
+    margin-top: 12px;
+    color: #34495e;
+    font-size: 14px;
+    line-height: 1.5;
+    border-collapse: collapse;
+    th{
+      padding: 8px 10px;
+      font-weight: 600;
+      text-align: left;
+      &:first-child{
+        padding-left: 0;
+      }
+    }
+    td{
+      padding: 8px;
+      border-top: 1px solid #f1f4f8;
+      &:first-child{
+        padding-left: 0;
+      }
+    }
+    code{
+      display: inline;
+      margin: 0 2px;
+      padding: 2px 5px;
+      font-size: 14px;
+      font-family: inherit;
+      word-break: keep-all;
+      background-color: #f7f8fa;
+      border-radius: 4px;
+      -webkit-font-smoothing: antialiased;
+    }
+    em{
+      color: #4fc08d;
+      font-size: 14px;
+      font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+      font-style: normal;
+      -webkit-font-smoothing: auto;
+    }
+  }
+}
+
+
+
+
+/*修改滚动条样式*/
+div::-webkit-scrollbar{
+  width:10px;
+  height:10px;
+  /**/
+}
+div::-webkit-scrollbar-track{
+  background: rgb(239, 239, 239);
+  border-radius:2px;
+}
+div::-webkit-scrollbar-thumb{
+  background: #bfbfbf;
+  border-radius:10px;
+}
+div::-webkit-scrollbar-thumb:hover{
+  background: #bfbfbf;
+}
+div::-webkit-scrollbar-corner{
+  background: #179a16;
 }

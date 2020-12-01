@@ -68,11 +68,19 @@ module.exports = {
             template: './index.html'
         })
     ],
+    performance: {
+        hints:'warning',
+        //入口起点的最大体积
+        maxEntrypointSize: 50000000,
+        //生成文件的最大体积
+        maxAssetSize: 30000000
+    },
     resolve: {
         extensions: ['*', '.js', '.vue', '.json'],
         alias: {
             Vue: 'Vue',
-            'vue-router': 'VueRouter'
+            'vue-router': 'VueRouter',
+            '@': path.resolve(__dirname, './src')
         }
     },
     mode: 'production'

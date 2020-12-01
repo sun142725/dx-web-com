@@ -4,11 +4,11 @@ import './util/rem'
 import './style/common.scss'
 import CustomSwitch from '../packages/switch/index'
 import { signParams } from '../packages/dx-sign/dx-sign'
-import DoctorList from '../packages/doctor-list/doctor-list'
-import ImageTextUD from '../packages/image-text-u-d/image-text-u-d.vue'
+import Button from './packages/Button/index';
 
 const components = [
-  CustomSwitch
+  CustomSwitch,
+  Button
 ]
 
 window.Vue = Vue;

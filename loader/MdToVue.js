@@ -22,8 +22,10 @@ module.exports = function (source) {
     }
   
     output = content.slice(start);
-    var reg = /<h3>([\s\S]*?)<\/pre>/g
+    
+    var reg = /(<h3>([\s\S]*?)<\/h3>([\s\S]*?)<pre>([\s\S]*?)<\/pre>)|(<h3>([\s\S]*?)<\/h3>([\s\S]*?)<table>([\s\S]*?)<\/table>)/g
     output = output.replace(reg, "<div class='md-card'>$&</div>")
+    
   
     return `
       <template>
