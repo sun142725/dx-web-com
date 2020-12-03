@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 import './util/rem'
 import './style/common.scss'
-import { signParams } from '../packages/dx-sign/dx-sign'
+import { signParams } from './src/packages/dx-sign/'
 
 import Button from './packages/button';
 import Switch from './packages/switch';

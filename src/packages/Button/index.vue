@@ -41,7 +41,6 @@
       }
     },
     mounted(){
-      console.log(this)
     },
     methods: {
       handleClick(e) {

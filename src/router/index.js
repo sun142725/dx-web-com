@@ -1,15 +1,19 @@
 import Vue from 'vue'
 Vue.use(VueRouter)
 import App from '../App.vue'
-import UrlUtils from '../../packages/url-utils/demo/index.vue'
-import DxSign from '../../packages/dx-sign/demo/index.vue'
+// 文档
 const Docs = () => import(/* webpackChunkName: "doc" */ '@/docs/index.vue')
 const Introduce = () => import(/* webpackChunkName: "doc" */ '@/docs/introduce.vue')
 const Standard = () => import(/* webpackChunkName: "doc" */ '@/docs/standard.vue')
 
+// -- 组件
 const Button = () => import(/* webpackChunkName: "doc" */ '@/packages/button/doc/index.vue')
 const Switch = () => import(/* webpackChunkName: "doc" */ '@/packages/switch/doc/index.vue')
+// -- 工具类
+const DxSign = () => import(/* webpackChunkName: "doc" */ '@/packages/dx-sign/doc/index.vue')
+const UrlUtils = () => import(/* webpackChunkName: "doc" */ '@/packages/url-utils/doc/index.vue')
 
+// demo
 const H5Demo = () => import(/* webpackChunkName: "demo" */ '@/demo/h5.vue')
 const H5Button = () => import(/* webpackChunkName: "demo" */ '@/packages/button/demo/index-h5.vue')
 

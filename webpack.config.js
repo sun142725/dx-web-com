@@ -3,7 +3,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './docs'),
         filename: 'app.js',
-        chunkFilename: "[id].js",
-        publicPath: './'
+        chunkFilename: "[id].[chunkhash].js",
+        publicPath: '/'
     },
     devServer: {
         port: 8888, // Defaults to 8080
@@ -64,6 +64,7 @@ module.exports = {
     },
     plugins: [
         new webpack.ProgressPlugin(),
+        new CleanWebpackPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html'
@@ -87,7 +88,7 @@ module.exports = {
     mode: 'production'
 };
 var a = process.env.NODE_ENV
-console.log(process.env.NODE_ENV)
+console.log("process.env.NODE_ENV", process.env)
 if (process.env.NODE_ENV == 'production') {
   console.log('process.env.NODE_ENV', process.env.NODE_ENV)
     module.exports.devtool = '#source-map'
