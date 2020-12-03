@@ -14,7 +14,7 @@ const H5Demo = () => import(/* webpackChunkName: "demo" */ '@/demo/h5.vue')
 const H5Button = () => import(/* webpackChunkName: "demo" */ '@/packages/button/demo/index-h5.vue')
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes: [
       {
         path: '/',

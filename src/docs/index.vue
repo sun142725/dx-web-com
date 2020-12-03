@@ -16,7 +16,7 @@
         </div>
         <div class="dx-doc-main">
           <div class="h5-preview">
-            <iframe style="height:640px; width:100%;" src="http://localhost:8888/h5/button" frameborder="0"></iframe>
+            <iframe style="height:640px; width:100%;" :src="iframeUrl" frameborder="0"></iframe>
           </div>
           <router-view></router-view>
         </div>
@@ -34,7 +34,7 @@ import { NavBar, ActionSheet } from 'vant'
     components: { NavBar, ActionSheet },
     data() {
       return {
-        iframeUrl: ''
+        iframeUrl: window.location.origin + window.location.pathname + "#/h5/button"
       }
     },
     mounted: function(){

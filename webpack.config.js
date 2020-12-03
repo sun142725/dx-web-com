@@ -10,8 +10,9 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './docs'),
-        publicPath: './',
-        filename: 'build.js'
+        filename: 'app.js',
+        chunkFilename: "[id].js",
+        publicPath: './'
     },
     devServer: {
         port: 8888, // Defaults to 8080
