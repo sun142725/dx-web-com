@@ -5,11 +5,11 @@
       <div class="dx-web-doc-container">
         <div class="dx-doc-nav__group">
           <div class="dx-doc-nav__title">开发指南</div>
-          <div class="dx-doc-nav__item"><router-link to="/doctor-list">介绍</router-link></div>
-          <div class="dx-doc-nav__item"><router-link to="/doctor-l">医生列表2</router-link></div>
+          <div class="dx-doc-nav__item"><router-link to="/docs/introduce">介绍</router-link></div>
+          <div class="dx-doc-nav__item"><router-link to="/docs/standard">Web 规范</router-link></div>
           <div class="dx-doc-nav__title">基础组件</div>
           <div class="dx-doc-nav__item"><router-link to="/docs/button">Button 按钮</router-link></div>
-          <div class="dx-doc-nav__item"><router-link to="/docs/dx-sign">sign 加密</router-link></div>
+          <div class="dx-doc-nav__item"><router-link to="/docs/switch">Switch 开关</router-link></div>
           <div class="dx-doc-nav__title">工具</div>
           <div class="dx-doc-nav__item"><router-link to="/docs/url-utils">url 参数获取</router-link></div>
           <div class="dx-doc-nav__item"><router-link to="/docs/dx-sign">sign 加密</router-link></div>

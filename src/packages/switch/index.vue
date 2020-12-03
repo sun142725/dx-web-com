@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: "CustomSwitch",
+    name: "Switch",
     props: {
       value: {
         type: Boolean,

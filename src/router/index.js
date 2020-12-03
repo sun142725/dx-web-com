@@ -4,10 +4,14 @@ import App from '../App.vue'
 import UrlUtils from '../../packages/url-utils/demo/index.vue'
 import DxSign from '../../packages/dx-sign/demo/index.vue'
 const Docs = () => import(/* webpackChunkName: "doc" */ '@/docs/index.vue')
-const Button = () => import(/* webpackChunkName: "doc" */ '@/packages/button/doc/index.vue')
+const Introduce = () => import(/* webpackChunkName: "doc" */ '@/docs/introduce.vue')
+const Standard = () => import(/* webpackChunkName: "doc" */ '@/docs/standard.vue')
 
-const H5Demo = () => import(/* webpackChunkName: "doc" */ '@/demo/h5.vue')
-const H5Button = () => import(/* webpackChunkName: "doc" */ '@/packages/button/demo/index-h5.vue')
+const Button = () => import(/* webpackChunkName: "doc" */ '@/packages/button/doc/index.vue')
+const Switch = () => import(/* webpackChunkName: "doc" */ '@/packages/switch/doc/index.vue')
+
+const H5Demo = () => import(/* webpackChunkName: "demo" */ '@/demo/h5.vue')
+const H5Button = () => import(/* webpackChunkName: "demo" */ '@/packages/button/demo/index-h5.vue')
 
 const router = new VueRouter({
     mode: 'history',
@@ -24,9 +28,24 @@ const router = new VueRouter({
         redirect: '/docs/button',
         children: [
           {
+            path: '/docs/introduce',
+            name: 'introduce',
+            component: Introduce
+          },
+          {
+            path: '/docs/standard',
+            name: 'standard',
+            component: Standard
+          },
+          {
             path: '/docs/button',
             name: 'Button',
             component: Button
+          },
+          {
+            path: '/docs/switch',
+            name: 'switch',
+            component: Switch
           },
           {
             path: '/docs/dx-sign',

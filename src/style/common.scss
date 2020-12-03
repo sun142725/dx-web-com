@@ -215,6 +215,48 @@ input:disabled{
       -webkit-font-smoothing: auto;
     }
   }
+  ul{
+    li{
+      padding: 6px 16px;
+      overflow-x: auto;
+      color: #58727e;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+      line-height: 26px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      -webkit-font-smoothing: auto;
+      list-style: square inside;
+      code{
+        display: inline;
+        margin: 0 2px;
+        padding: 2px 5px;
+        font-size: 14px;
+        font-family: inherit;
+        word-break: keep-all;
+        background-color: #f7f8fa;
+        border-radius: 4px;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+  blockquote{
+    margin: 6px 0;
+    background-color: #fff;
+    padding-left: 16px;
+    position: relative;
+    &::before{
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 4px;
+      background-color:#c3c3c3;
+      left: 0;
+      top:0;
+      bottom: 0;
+    }
+  }
 }
 
 

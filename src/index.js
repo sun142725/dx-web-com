@@ -2,12 +2,13 @@ import Vue from 'vue'
 
 import './util/rem'
 import './style/common.scss'
-import CustomSwitch from '../packages/switch/index'
 import { signParams } from '../packages/dx-sign/dx-sign'
-import Button from './packages/Button/index';
+
+import Button from './packages/button';
+import Switch from './packages/switch';
 
 const components = [
-  CustomSwitch,
+  Switch,
   Button
 ]
 
@@ -21,10 +22,9 @@ const install = function (Vue, opts = {}) {
 }
 export {
   install,
-  CustomSwitch,
   signParams,
-  DoctorList,
-  ImageTextUD
+  Button,
+  Switch
 }
 
 /* 支持使用标签的方式引入 */

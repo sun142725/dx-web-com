@@ -1,9 +1,9 @@
-import Button from './index.vue'
+import DxButton from './index.vue'
 
 /* istanbul ignore next */
-Button.install = function(Vue) {
-  Vue.component(Button.name, Button);
+DxButton.install = function(Vue) {
+  Vue.component("Dx" + DxButton.name, DxButton);
 };
 
-export default Button;
+export default DxButton;
 
