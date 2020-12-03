@@ -65,10 +65,7 @@ module.exports = {
     plugins: [
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
-        new VueLoaderPlugin(),
-        new HtmlWebpackPlugin({
-            template: './index.html'
-        })
+        new VueLoaderPlugin()
     ],
     performance: {
         hints:'warning',
@@ -118,6 +115,9 @@ if (process.env.NODE_TYPE == 'package') {
 // 打包文档
   if(process.env.NODE_TYPE == 'doc'){
     module.exports.output.publicPath = './'
+    module.exports.plugins.push(new HtmlWebpackPlugin({
+        template: './index.html'
+    }))
     // Banner
     var moment = require('moment');
     var pkg = require('./package.json');
