@@ -1,5 +1,5 @@
 import md5 from 'js-md5';
-import urlUtils from '../../../packages/url-utils/url-utils' 
+import urlUtils from '@/packages/url-utils/' 
 
 
 /**

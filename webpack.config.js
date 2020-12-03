@@ -88,10 +88,11 @@ module.exports = {
     mode: 'production'
 };
 var a = process.env.NODE_ENV
-console.log("process.env.NODE_ENV", process.env)
-if (process.env.NODE_ENV == 'production') {
-  console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-    module.exports.devtool = '#source-map'
+console.log("process.env.NODE_ENV", process.env.NODE_TYPE)
+
+// 打包组件
+if (process.env.NODE_TYPE == 'package') {
+      module.exports.devtool = '#source-map'
       module.exports.entry = './src/index.js';
       module.exports.output = {
         path: path.resolve(__dirname, './dist'),
@@ -112,4 +113,19 @@ if (process.env.NODE_ENV == 'production') {
           entryOnly: true 
         })
       );
+  }
+
+// 打包文档
+  if(process.env.NODE_TYPE == 'doc'){
+    module.exports.output.publicPath = './'
+    // Banner
+    var moment = require('moment');
+    var pkg = require('./package.json');
+    var banner = 'dx-web-com docs \nversion: ' + pkg.version + ' \nrepo: https://github.com/sun142725/dx-web-com \nbuild: ' + moment().format('YYYY-MM-DD HH:mm:ss')
+    module.exports.plugins.push(
+      new webpack.BannerPlugin({ 
+        banner: banner,
+        entryOnly: true 
+      })
+    );
   }
