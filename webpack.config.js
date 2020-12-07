@@ -65,7 +65,10 @@ module.exports = {
     plugins: [
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        })
     ],
     performance: {
         hints:'warning',
@@ -82,12 +85,13 @@ module.exports = {
             '@': path.resolve(__dirname, './src')
         }
     },
-    mode: 'production'
+    mode: 'production',
+    devtool: 'source-map'
 };
 var a = process.env.NODE_ENV
 console.log("process.env.NODE_ENV", process.env.NODE_TYPE)
 
-// 打包组件
+// 打包组件包
 if (process.env.NODE_TYPE == 'package') {
       module.exports.devtool = '#source-map'
       module.exports.entry = './src/index.js';

@@ -16,6 +16,7 @@ const UrlUtils = () => import(/* webpackChunkName: "doc" */ '@/packages/url-util
 // demo
 const H5Demo = () => import(/* webpackChunkName: "demo" */ '@/demo/h5.vue')
 const H5Button = () => import(/* webpackChunkName: "demo" */ '@/packages/button/demo/index-h5.vue')
+const H5Switch = () => import(/* webpackChunkName: "demo" */ '@/packages/switch/demo/index-h5.vue')
 
 const router = new VueRouter({
     mode: 'hash',
@@ -73,6 +74,11 @@ const router = new VueRouter({
             path: '/h5/button',
             name: 'h5-button',
             component: H5Button
+          },
+          {
+            path: '/h5/switch',
+            name: 'h5-switch',
+            component: H5Switch
           },
         ]
       },

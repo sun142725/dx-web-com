@@ -4,56 +4,56 @@
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">按钮类型</h2>
         <div class="demo-button-row">
-            <Button type="primary" style="margin-right:5px">填充按钮</Button>
-            <Button type="default" style="margin-right:5px">default</Button>
-            <Button type="warning">线框按钮</Button>
+            <dx-button type="primary" style="margin-right:5px">填充按钮</dx-button>
+            <dx-button type="default" style="margin-right:5px">default</dx-button>
+            <dx-button type="warning">线框按钮</dx-button>
         </div>
-        <Button type="danger" style="width:106px">线框按钮</Button>
+        <dx-button type="danger" style="width:106px">线框按钮</dx-button>
     </div>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">描边模式</h2>
-        <div class="demo-button-row">
-            <Button plain type="primary" style="margin-right:5px">填充按钮</Button>
-            <Button plain type="default" style="margin-right:5px">default</Button>
-            <Button plain type="warning">线框按钮</Button>
+        <div class="demo-dx-button-row">
+            <dx-button plain type="primary" style="margin-right:5px">填充按钮</dx-button>
+            <dx-button plain type="default" style="margin-right:5px">default</dx-button>
+            <dx-button plain type="warning">线框按钮</dx-button>
         </div>
-        <Button plain type="danger" style="width:106px">线框按钮</Button>
+        <dx-button plain type="danger" style="width:106px">线框按钮</dx-button>
     </div>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">按钮尺寸</h2>
-        <div class="demo-button-row" style="width: 70vw">
-            <Button type="primary" size="large">大按钮</Button>
+        <div class="demo-dx-button-row" style="width: 70vw">
+            <dx-button type="primary" size="large">大按钮</dx-button>
         </div>
-        <div class="demo-button-row" style="width: 50vw">
-            <Button type="primary" size="normal">普通按钮</Button>
+        <div class="demo-dx-button-row" style="width: 50vw">
+            <dx-button type="primary" size="normal">普通按钮</dx-button>
         </div>
-        <div class="demo-button-row" style="width: 30vw">
-            <Button type="primary" size="mini">小按钮</Button>
+        <div class="demo-dx-button-row" style="width: 30vw">
+            <dx-button type="primary" size="mini">小按钮</dx-button>
         </div>
     </div>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">禁用状态</h2>
-        <div class="demo-button-row">
-            <Button type="primary" disabled style="margin-right:5px">填充按钮</Button>
-            <Button type="default" disabled style="margin-right:5px">default</Button>
-            <Button type="danger" disabled>线框按钮</Button>
+        <div class="demo-dx-button-row">
+            <dx-button type="primary" disabled style="margin-right:5px">填充按钮</dx-button>
+            <dx-button type="default" disabled style="margin-right:5px">default</dx-button>
+            <dx-button type="danger" disabled>线框按钮</dx-button>
         </div>
     </div>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">自定义颜色</h2>
         <div class="demo-button-row">
-            <Button type="primary" color="#f65a41" style="margin-right:5px">填充按钮</Button>
-            <Button type="default" color="#f65a41" plain disabled style="margin-right:5px">default</Button>
-            <Button type="danger" color="linear-gradient(to right, #ff6034, #ee0a24)" disabled>线框按钮</Button>
+            <dx-button type="primary" color="#f65a41" style="margin-right:5px">填充按钮</dx-button>
+            <dx-button type="default" color="#f65a41" plain disabled style="margin-right:5px">default</dx-button>
+            <dx-button type="danger" color="linear-gradient(to right, #ff6034, #ee0a24)" style="margin-right:5px">填充按钮</dx-button>
         </div>
     </div>
 </div>
 </template>
 <script>
-import Button from '../index'
+import DxButton from '../index';
 export default{
     name : 'ButtonH5',
-    components: { Button },
+    components: { DxButton },
     data:function(){
         return {}
     },

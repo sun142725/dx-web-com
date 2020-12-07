@@ -1,9 +1,9 @@
-import Switch from './index'
+import DxSwitch from './index.vue'
 
 /* istanbul ignore next */
-Switch.install = function(Vue) {
-  Vue.component(Switch.name, Switch);
+DxSwitch.install = function(Vue) {
+  Vue.component("Dx" +DxSwitch.name, DxSwitch);
 };
 
-export default Switch;
+export default DxSwitch;
 

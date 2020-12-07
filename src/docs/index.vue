@@ -34,7 +34,7 @@ import { NavBar, ActionSheet } from 'vant'
     components: { NavBar, ActionSheet },
     data() {
       return {
-        iframeUrl: window.location.origin + window.location.pathname + "#/h5/button"
+        iframeUrl: window.location.origin + window.location.pathname + "#/h5/switch"
       }
     },
     mounted: function(){

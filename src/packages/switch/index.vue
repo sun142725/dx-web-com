@@ -35,13 +35,12 @@
   .weui-switch {
     display: block;
     position: relative;
-    width: 52px;
-    height: 32px;
-    border: 1px solid #DFDFDF;
+    width: 45px;
+    height: 25px;
     outline: 0;
     border-radius: 16px;
     box-sizing: border-box;
-    background-color: #DFDFDF;
+    background-color: #999999;
     transition: background-color 0.1s, border 0.1s;
     cursor: pointer;
   }
@@ -51,20 +50,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
-    height: 30px;
+    width: 45px;
+    height: 25px;
     border-radius: 15px;
-    background-color: #FDFDFD;
+    background-color: #999999;
     transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
   }
 
   .weui-switch:after {
     content: " ";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
+    top: 1px;
+    left: 1px;
+    width: 23px;
+    height: 23px;
     border-radius: 15px;
     background-color: #FFFFFF;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -72,13 +71,13 @@
   }
 
   .weui-switch-on {
-    border-color: #1AAD19;
-    background-color: #1AAD19;
+    border-color: #3E87FF;
+    background-color: #3E87FF;
   }
 
   .weui-switch-on:before {
-    border-color: #1AAD19;
-    background-color: #1AAD19;
+    border-color: #3E87FF;
+    background-color: #3E87FF;
   }
 
   .weui-switch-on:after {
