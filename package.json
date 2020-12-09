@@ -2,7 +2,7 @@
   "name": "dx-web-com",
   "version": "1.0.9",
   "description": "大象组件库",
-  "main": "dist/main.js",
+  "main": "dist/dx-web-com.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devTest": "webpack-dev-server --inline --hot --host=0.0.0.0 --port=8888",
