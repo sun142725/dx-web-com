@@ -3,7 +3,7 @@
     <header>Button 按钮</header>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">按钮类型</h2>
-        <div class="demo-button-row">
+        <div class="demo-dx-button-row">
             <dx-button type="primary" style="margin-right:5px">填充按钮</dx-button>
             <dx-button type="default" style="margin-right:5px">default</dx-button>
             <dx-button type="warning">线框按钮</dx-button>
@@ -41,10 +41,10 @@
     </div>
     <div class="dx-doc-demo-block">
         <h2 class="dx-doc-demo__title">自定义颜色</h2>
-        <div class="demo-button-row">
-            <dx-button type="primary" color="#f65a41" style="margin-right:5px">填充按钮</dx-button>
+        <div class="demo-dx-button-row">
+            <dx-button type="primary" color="#f65a41" style="margin-right:5px">橙色</dx-button>
             <dx-button type="default" color="#f65a41" plain disabled style="margin-right:5px">default</dx-button>
-            <dx-button type="danger" color="linear-gradient(to right, #ff6034, #ee0a24)" style="margin-right:5px">填充按钮</dx-button>
+            <dx-button type="danger" color="linear-gradient(to right, blue, #f65a41)" style="margin-right:5px">渐变</dx-button>
         </div>
     </div>
 </div>
@@ -91,7 +91,7 @@ header{
     font-size: 14px;
     line-height: 16px;
 }
-.demo-button-row{
+.demo-dx-button-row{
     margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
